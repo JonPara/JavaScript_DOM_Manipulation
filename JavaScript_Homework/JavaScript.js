@@ -1,11 +1,13 @@
 // Get references to the tbody element, input field and button
 var $tbody = document.querySelector("tbody");
+var $date = document.querySelector("#date");
 
 // Add an event listener to the searchButton, call handleSearchButtonClick when clicked
-//searchButton.addEventListener("click", handleSearchButtonClick);
+searchButton.addEventListener("click", handleSearchButtonClick);
 
 // Set filteredAddresses to addressData initially
 var filteredData = ufoData;
+var resetData = ufoData;
 
 // renderTable renders the filteredAddresses to the tbody
 function renderTable() {
@@ -25,4 +27,15 @@ function renderTable() {
   }
 }
 
+function handleSearchButtonClick(event){
+  var dateFilter = $date.nodeValue.trim();
+  if (dateFilter != " "){
+    dateFilter = ufoData.filter(function(data){
+      var dateTime = data.datetime;
+      return dateTime === dateFilter;
+    });
+  };
+
+}
 renderTable();
+
