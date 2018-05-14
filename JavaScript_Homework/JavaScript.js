@@ -33,11 +33,11 @@ function renderTable() {
     }
   }
 }
-//renderTable();
+renderTable();
 
 
 
-function handleSearchButtonClick(event) {
+/* function handleSearchButtonClick(event) {
   // prevent page from refreshing
   event.preventDefault();
 
@@ -84,12 +84,9 @@ function handleSearchButtonClick(event) {
        // If true, add the address to the filteredAddresses, otherwise don't add it to filteredAddresses
          return shapeData === filterShape;
      });
+     };
    
 renderTable();
 
-};
 
-// Render the table for the first time on page load
-renderTable();
-
-
+ */
